@@ -1,7 +1,7 @@
 const STOP_ID = '200070'
 
 async function GTFS(file) { //for each of the txt files
-    const response = await fetch(`gtfs/${file}`);
+    const response = await fetch(`gtfs/${file}`, {cache: 'no-store'});
     const text = await response.text();
     return Papa.parse(text, {header: true, skipEmptyLines: true}).data;
 }
