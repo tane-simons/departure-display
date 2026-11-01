@@ -1,0 +1,94 @@
+name: Update GTFS Data
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-gtfs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download and filter GTFS for Stop 200070
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          mkdir -p temp_gtfs gtfs
+          curl -f -s -L -H "Authorization: apikey $API_KEY" \
+            "https://api.transport.nsw.gov.au/v1/publictransport/timetables/complete/gtfs" \
+            -o temp_gtfs/gtfs.zip
+          unzip -q temp_gtfs/gtfs.zip -d temp_gtfs
+
+          python3 -c "
+          import csv
+
+          STOP_ID = '200070'
+
+          valid_stops = set()
+          with open('temp_gtfs/stops.txt', mode='r', encoding='utf-8-sig') as infile, \
+               open('gtfs/stops.txt', mode='w', newline='', encoding='utf-8') as outfile:
+              reader = csv.DictReader(infile)
+              writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+              writer.writeheader()
+              for row in reader:
+                  if row['stop_id'] == STOP_ID or row.get('parent_station') == STOP_ID:
+                      valid_stops.add(row['stop_id'])
+                      writer.writerow(row)
+
+          valid_trips = set()
+          with open('temp_gtfs/stop_times.txt', mode='r', encoding='utf-8-sig') as infile, \
+               open('gtfs/stop_times.txt', mode='w', newline='', encoding='utf-8') as outfile:
+              reader = csv.DictReader(infile)
+              writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+              writer.writeheader()
+              for row in reader:
+                  if row['stop_id'] in valid_stops:
+                      valid_trips.add(row['trip_id'])
+                      writer.writerow(row)
+
+          valid_routes = set()
+          valid_services = set()
+          with open('temp_gtfs/trips.txt', mode='r', encoding='utf-8-sig') as infile, \
+               open('gtfs/trips.txt', mode='w', newline='', encoding='utf-8') as outfile:
+              reader = csv.DictReader(infile)
+              writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+              writer.writeheader()
+              for row in reader:
+                  if row['trip_id'] in valid_trips:
+                      valid_routes.add(row['route_id'])
+                      valid_services.add(row['service_id'])
+                      writer.writerow(row)
+
+          with open('temp_gtfs/routes.txt', mode='r', encoding='utf-8-sig') as infile, \
+               open('gtfs/routes.txt', mode='w', newline='', encoding='utf-8') as outfile:
+              reader = csv.DictReader(infile)
+              writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+              writer.writeheader()
+              for row in reader:
+                  if row['route_id'] in valid_routes:
+                      writer.writerow(row)
+
+          with open('temp_gtfs/calendar.txt', mode='r', encoding='utf-8-sig') as infile, \
+               open('gtfs/calendar.txt', mode='w', newline='', encoding='utf-8') as outfile:
+              reader = csv.DictReader(infile)
+              writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+              writer.writeheader()
+              for row in reader:
+                  if row['service_id'] in valid_services:
+                      writer.writerow(row)
+          "
+          rm -rf temp_gtfs
+
+      - name: Commit and push updated GTFS files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gtfs/*.txt
+          git diff --staged --quiet || git commit -m "Auto-update filtered GTFS data"
+          git push
