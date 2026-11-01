@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <title>Departure Board</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script> <!--papaparse for csv-->
+    </head>
+    <body>
+        <main>
+            <h1 id="stop-header">Loading departures...</h1>
+            <div id="departures-container"></div>
+            <div id="fade"></div>
+        </main>
+        <template id="departures-template">
+            <div class="departure-row">
+                <div class="route-name"></div>
+                <div class="headsign"></div>
+                <div class="platform-name"></div>
+                <div class="time-left"></div>
+            </div>
+        </template>
+        <script src="script.js"></script>
+    </body>
+</html>
