@@ -1,6 +1,4 @@
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJvb0lJcGhhb1dBazVwSFZKak1XSEJvcnkwaHlwek1EM204ZU42MElfMWJBIiwiaWF0IjoxNzkzNTM5MjY1fQ.7AqV5MrMOGwruw1a6jX5ML7l3WL5dfW1x4PsRJz_nYY
-
-const STOP_ID = '204420'
+const STOP_ID = '200070'
 
 async function GTFS(file) { //for each of the txt files
     const response = await fetch(`gtfs/${file}`);
@@ -59,7 +57,7 @@ async function loadDepartures() {
                     platform_name: platformName
                 };
             })
-            .filter(d => d !== null && d.mins_left >0)
+            .filter(d => d !== null && d.mins_left >=0)
             .sort((a,b) => a.mins_left-b.mins_left)
             .slice(0,10);
         
