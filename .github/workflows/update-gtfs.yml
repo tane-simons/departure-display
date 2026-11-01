@@ -74,13 +74,16 @@ jobs:
                   if row['route_id'] in valid_routes:
                       writer.writerow(row)
 
+          from datetime import datetime, timedelta
+          today_str = (datetime.utcnow() + timedelta(hours=10)).strftime('%Y%m%d')
+
           with open('temp_gtfs/calendar.txt', mode='r', encoding='utf-8-sig') as infile, \
                open('gtfs/calendar.txt', mode='w', newline='', encoding='utf-8') as outfile:
               reader = csv.DictReader(infile)
               writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
               writer.writeheader()
               for row in reader:
-                  if row['service_id'] in valid_services:
+                  if row['service_id'] in valid_services and row['start_date'] <= today_str <= row['end_date']:
                       writer.writerow(row)
           "
           rm -rf temp_gtfs
