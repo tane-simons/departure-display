@@ -1,4 +1,4 @@
-const STOP_ID = '200070'
+const STOP_ID = '220510'
 
 async function GTFS(file) { //for each of the txt files
     const response = await fetch(`gtfs/${file}`, {cache: 'no-store'});
@@ -30,10 +30,16 @@ async function loadDepartures() {
         const parentStop = stops.find(s=>s.stop_id === STOP_ID);
         header.textContent = parentStop ? parentStop.stop_name : 'stop name error';
         const parentName = parentStop ? parentStop.stop_name: '';
-        const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
-        const today = days[new Date().getDay()];
+        const now = new Date();
+        const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+        const today = days[now.getDay()];
+        const todayStr = now.getFullYear().toString() +
+            String(now.getMonth()+1).padStart(2,'0') +
+            String(now.getDate()).padStart(2,'0');
         const currentServices = new Set(
-            calendar.filter(c => c[today] === '1').map(c => c.service_id)
+            calendar
+                .filter(c => c[today] === '1' && c.start_date <= todayStr && c.end_date >= todayStr)
+                .map(c => c.service_id)
         );
         const validStopIds = stops
             .filter(s => s.stop_id === STOP_ID || s.parent_station === STOP_ID)
@@ -46,7 +52,8 @@ async function loadDepartures() {
                 const route = routes.find(r => r.route_id === trip.route_id) || {};
                 const minsLeft = minsUntil(st.departure_time);
                 const platform = stops.find(s => s.stop_id === st.stop_id);
-                const platformName = platform ? platform.stop_name.replace(parentName,'').trim():'';
+                const baseName = parentName.replace(/ Station$/i,'');
+                const platformName = platform ? platform.stop_name.replace(new RegExp(`^${baseName}( Station)?,\\s*`,'i'),'').trim():'';
                 return {
                     route_short_name: route.route_short_name || '',
                     route_color: route.route_color || '000000',
@@ -58,6 +65,13 @@ async function loadDepartures() {
                 };
             })
             .filter(d => d !== null && d.mins_left >=0)
+            .filter((d,index,self) =>
+                index === self.findIndex(t =>
+                    t.departure_time === d.departure_time &&
+                    t.route_short_name === d.route_short_name &&
+                    t.platform_name === d.platform_name
+                )
+            )
             .sort((a,b) => a.mins_left-b.mins_left)
             .slice(0,10);
         
