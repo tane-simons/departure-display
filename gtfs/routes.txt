@@ -1,42 +1,7 @@
 route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color,route_text_color,exact_times
-13-N30-sj2-1,2503,N30,City Town Hall to Macarthur (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-13-N40-sj2-1,2503,N40,City Town Hall to East Hills (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N50-sj2-1,2504,N50,City Town Hall to Liverpool via Strathfield (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N60-sj2-1,2504,N60,City Town Hall to Fairfield via Strathfield (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N61-sj2-1,2504,N61,City Town Hall to Carlingford via Strathfield (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N70-sj2-1,2504,N70,City Town Hall to Penrith via Parramatta (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N71-sj2-1,2504,N71,City Town Hall to Richmond via Parramatta (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-14-N92-sj2-1,2504,N92,City Town Hall to Tallawong via Macquarie Park (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-505-sj2-1,2507,505,City Town Hall to Woolwich,Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-506-sj2-1,2507,506,City Domain to Macquarie University via East Ryde,Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-507-sj2-1,2507,507,City Hyde Park and Gladesville to Meadowbank via Putney,Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-52-sj2-1,2507,52,City Hyde Park to Parramatta via West Ryde,Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-N80-sj2-1,2507,N80,City Town Hall to Hornsby via Strathfield (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-N81-sj2-1,2507,N81,City Town Hall to Parramatta via Sydney Olympic Park (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-N90-sj2-1,2507,N90,City Town Hall to Hornsby via Chatswood (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-17-N91-sj2-1,2507,N91,City Town Hall to Macquarie Centre (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-2-CCN-sj2-1,X0000,CCN,Central Coast and Newcastle Line,Intercity Trains Network,2,D11F2F,FFFFFF,1
 2-SCO-sj2-1,X0000,SCO,South Coast Line,Intercity Trains Network,2,005AA3,FFFFFF,1
-2-T1-N-sj2-1,x0001,T1,T1 North Shore and Western Line,Sydney Trains Network,2,F99D1C,FFFFFF,1
-2-T2-sj2-1,x0001,T2,T2 Leppington and Inner West Line,Sydney Trains Network,2,0098CD,FFFFFF,1
-2-T3-sj2-1,x0001,T3,T3 Liverpool and Inner West Line,Sydney Trains Network,2,F37021,FFFFFF,1
 2-T4-sj2-1,x0001,T4,T4 Eastern Suburbs and Illawarra Line,Sydney Trains Network,2,005AA3,FFFFFF,1
-2-T7-sj2-1,x0001,T7,T7 Olympic Park Line,Sydney Trains Network,2,6F818E,FFFFFF,1
 2-T8-sj2-1,x0001,T8,T8 Airport and South Line,Sydney Trains Network,2,00954C,FFFFFF,1
-2-T9-sj2-1,x0001,T9,T9 Northern Line,Sydney Trains Network,2,D11F2F,FFFFFF,1
-30-311-sj2-1,2509,311,City Millers Point to Central Belmore Park via Potts Point and Darlinghurst,Sydney Buses Network,700,00B5EF,FFFFFF,1
-30-324-sj2-1,2509,324,City Walsh Bay to Watsons Bay via Old South Head Rd,Sydney Buses Network,700,00B5EF,FFFFFF,1
-30-325-sj2-1,2509,325,City Walsh Bay to Watsons Bay via Vaucluse Rd,Sydney Buses Network,700,00B5EF,FFFFFF,1
-30-378-sj2-1,2509,378,Unknown,Sydney Buses Network,700,00B5EF,FFFFFF,1
-31-N10-sj2-1,2510,N10,City Town Hall to Sutherland (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-31-N11-sj2-1,2510,N11,City Town Hall to Cronulla (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-31-N20-sj2-1,2510,N20,City Town Hall to Riverwood via SYD Airport (Night Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-64-N70-sj2-1,2454,N70,City Town Hall to Penrith via Parramatta (Night Service),Blue Mountains Buses Network,700,00B5EF,FFFFFF,1
-74-311-sj2-1,2459,311,City Millers Point to Central Belmore Park via Potts Point and Darlinghurst,Sydney Buses Network,700,00B5EF,FFFFFF,1
-74-389-sj2-1,2459,389,Pyrmont to Bondi Junction,Sydney Buses Network,700,00B5EF,FFFFFF,1
-74-441-sj2-1,2459,441,Birchgrove to City Art Gallery via QVB (Loop Service),Sydney Buses Network,700,00B5EF,FFFFFF,1
-74-502-sj2-1,2459,502,City Town Hall and Drummoyne to Cabarita Wharf,Sydney Buses Network,700,00B5EF,FFFFFF,1
-74-504-sj2-1,2459,504,City Domain to Chiswick,Sydney Buses Network,700,00B5EF,FFFFFF,1
-74-652-S-sj2-1,2459,652s,"Sydney Secondary College, Balmain Campus to City Town Hall",School buses,712,00B5EF,FFFFFF,1
-78-L2-sj2-1,SLR,L2,L2 Randwick Line,Sydney Light Rail Network,900,DD1E25,FFFFFF,0
-78-L3-sj2-1,SLR,L3,L3 Kingsford Line,Sydney Light Rail Network,900,781140,FFFFFF,0
+31-19T-8-sj2-1,7066,19T8,"Sydenham, Wolli Creek, Padstow, then all stations to Glenfield",Temporary buses,714,00B5EF,FFFFFF,1
+31-36T-4-sj2-1,7066,36T4,"Sydenham, then Wolli Creek, Arncliffe",Temporary buses,714,00B5EF,FFFFFF,1
+74-348-sj2-1,2459,348,Prince of Wales Hospital to Wolli Creek,Sydney Buses Network,700,00B5EF,FFFFFF,1
