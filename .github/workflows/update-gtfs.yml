@@ -28,7 +28,7 @@ jobs:
           python3 -c "
           import csv
 
-          STOP_ID = '200070'
+          STOP_ID = '220510'
 
           valid_stops = set()
           with open('temp_gtfs/stops.txt', mode='r', encoding='utf-8-sig') as infile, \
