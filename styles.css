@@ -16,11 +16,23 @@ main {
     width: 90%;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 0;
+}
+
 h1 {
     margin: 0;
     color: rgba(255,255,255,0.95);
-    font-size: 5vh;
-    margin: 2vh 0;
+    font-size: 4.5vh;
+}
+
+#live {
+    width: 2.5vh;
+    height: 4vh;
+    transform: rotate(-45deg);
 }
 
 #departures-container {
