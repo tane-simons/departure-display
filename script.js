@@ -1,4 +1,4 @@
-const STOP_ID = '220510' //can change to any station but also update the github actions python too
+const STOP_ID = '200070' //can change to any station but also update the github actions python too
 
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJvb0lJcGhhb1dBazVwSFZKak1XSEJvcnkwaHlwek1EM204ZU42MElfMWJBIiwiaWF0IjoxNzkzNTM5MjY1fQ.7AqV5MrMOGwruw1a6jX5ML7l3WL5dfW1x4PsRJz_nYY'
 //container with indivudal updates to give stop ids etc all in binary
