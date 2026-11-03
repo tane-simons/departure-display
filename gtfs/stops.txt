@@ -1,6 +1,8 @@
 stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
-220510,220510,Wolli Creek Station,,-33.9285468328,151.154113182,,,1,,,1
-2205111,2205111,Wolli Creek Station Platform 1,,-33.928538,151.1545,,,0,220510,,0
-2205112,2205112,Wolli Creek Station Platform 2,,-33.928626,151.154463,,,0,220510,,0
-2205113,2205113,Wolli Creek Station Platform 3,,-33.928023,151.153793,,,0,220510,,0
-2205114,2205114,Wolli Creek Station Platform 4,,-33.928067,151.153852,,,0,220510,,0
+200070,200070,Town Hall Station,,-33.8735963257,151.206899293,,,1,,,1
+2000391,2000391,Town Hall Station Platform 1,,-33.87365,151.206994,,,0,200070,,0
+2000392,2000392,Town Hall Station Platform 2,,-33.873621,151.206931,,,0,200070,,0
+2000393,2000393,Town Hall Station Platform 3,,-33.873674,151.206812,,,0,200070,,0
+2000394,2000394,Town Hall Station Platform 4,,-33.873592,151.206999,,,0,200070,,0
+2000395,2000395,Town Hall Station Platform 5,,-33.873662,151.206874,,,0,200070,,0
+2000396,2000396,Town Hall Station Platform 6,,-33.873653,151.2068,,,0,200070,,0

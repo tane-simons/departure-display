@@ -1,22 +1,33 @@
 route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
 APS_1a,SydneyTrains,T8,City Circle to Macarthur via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
-APS_1b,SydneyTrains,T8,City Circle to Leppington via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
-APS_2a,SydneyTrains,T8,Macarthur to City Circle via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
-APS_2b,SydneyTrains,T8,Leppington to City Circle via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_1c,SydneyTrains,T8,City Circle to Macarthur via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_1e,SydneyTrains,T8,City Circle to Leppington via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
+CCN_1b,NSWTrains,CCN,Central to Newcastle Interchange via Gordon,Central Coast & Newcastle Line,2,,D11F2F,FFFFFF
+CCN_2b,NSWTrains,CCN,Newcastle Interchange to Central via Gordon,Central Coast & Newcastle Line,2,,D11F2F,FFFFFF
 ESI_1a,SydneyTrains,T4,Bondi Junction to Waterfall via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
 ESI_1c,SydneyTrains,T4,City Circle to Waterfall,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
 ESI_1d,SydneyTrains,T4,Bondi Junction to Cronulla via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
 ESI_1f,SydneyTrains,T4,City Circle to Cronulla,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
 ESI_2a,SydneyTrains,T4,Waterfall to Bondi Junction via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
-ESI_2b,SydneyTrains,T4,Waterfall to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
 ESI_2d,SydneyTrains,T4,Cronulla to Bondi Junction via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
-ESI_2e,SydneyTrains,T4,Cronulla to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
-ESI_2f,SydneyTrains,T4,Cronulla to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+IWL_1a,SydneyTrains,T2,City Circle to Parramatta,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+IWL_1b,SydneyTrains,T2,City Circle to Parramatta,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+IWL_1c,SydneyTrains,T2,City Circle to Leppington via Granville,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+IWL_1i,SydneyTrains,T2,City Circle to Campbelltown via Granville,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+IWL_1j,SydneyTrains,T2,City Circle to Campbelltown via Granville,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
 IWL_2a,SydneyTrains,T2,Parramatta to City Circle ,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
 IWL_2b,SydneyTrains,T2,Parramatta to City Circle ,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+NSN_1a,SydneyTrains,T1,City to Hornsby and Berowra via Gordon,T1 North Shore Line,2,,F99D1C,FFFFFF
+NSN_2a,SydneyTrains,T1,Berowra and Hornsby to City via Gordon,T1 North Shore Line,2,,F99D1C,FFFFFF
+NSN_2i,SydneyTrains,T1,Berowra to Richmond via City,T1 North Shore Line,2,,F99D1C,FFFFFF
+NSN_2k,SydneyTrains,T1,Berowra to Emu Plains via City,T1 North Shore Line,2,,F99D1C,FFFFFF
+NTH_1a,SydneyTrains,T9,North Shore to Hornsby and Berowra via City and Strathfield,T9 Northern Line,2,,D11F2F,FFFFFF
+NTH_1b,SydneyTrains,T9,North Shore to Hornsby and Berowra via City and Strathfield,T9 Northern Line,2,,D11F2F,FFFFFF
+NTH_2a,SydneyTrains,T9,Berowra and Hornsby to North Shore via Strathfield and City,T9 Northern Line,2,,D11F2F,FFFFFF
+OLY_1a,SydneyTrains,T7,Central to Olympic Park,T7 Olympic Park Line,2,,6F818E,FFFFFF
 RTTA_DEF,SydneyTrains,,Out Of Service,Out Of Service trips,2,,888888,FFFFFF
 RTTA_REV,SydneyTrains,,Non Revenue,Non Revenue trips,2,,888888,FFFFFF
 SCO_1a,NSWTrains,SCO,Bondi Junction and Central to Bomaderry ,South Coast Line,2,,005AA3,FFFFFF
-SCO_1b,NSWTrains,SCO,Bondi Junction and Central to Port Kembla,South Coast Line,2,,005AA3,FFFFFF
 SCO_2a,NSWTrains,SCO,Bomaderry to Central and Bondi Junction,South Coast Line,2,,005AA3,FFFFFF
 SCO_2b,NSWTrains,SCO,Port Kembla to Central and Bondi Junction,South Coast Line,2,,005AA3,FFFFFF
+T3_1a,SydneyTrains,T3,City Circle to Liverpool via Regents Park,T3 Liverpool & Inner West Line,2,,F37021,FFFFFF
