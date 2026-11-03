@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p temp_gtfs gtfs
           curl -f -s -L -H "Authorization: apikey $API_KEY" \
-            "https://api.transport.nsw.gov.au/v1/publictransport/timetables/complete/gtfs" \
+            "https://api.transport.nsw.gov.au/v1/gtfs/schedule/sydneytrains" \
             -o temp_gtfs/gtfs.zip
           unzip -q temp_gtfs/gtfs.zip -d temp_gtfs
 
