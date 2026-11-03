@@ -29,9 +29,19 @@ h1 {
     font-size: 4.5vh;
 }
 
+@keyframes blink {
+    0%,50% {opacity:0.3;}
+    50.1%,100%{opacity:1;}
+}
+/* these are cool, for an svg you can control indiviudal paths with animations */
+#live path:nth-child(4) { animation: blink 3s infinite; animation-delay: 0s; }
+#live path:nth-child(3) { animation: blink 3s infinite; animation-delay: 0.4s; }
+#live path:nth-child(2) { animation: blink 3s infinite; animation-delay: 0.8s; }
+
 #live {
     width: 2.5vh;
     height: 4vh;
+    transform-origin: center;
     transform: rotate(-45deg);
 }
 
@@ -75,9 +85,16 @@ h1 {
 
 }
 
-.time-left {
+.time-container {
     text-align: right;
     font-weight: 600;
+}
+
+.time-left {
+}
+
+.ontime {
+    font-size: 40%;
 }
 
 #fade {
