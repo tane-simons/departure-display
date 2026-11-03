@@ -1,7 +1,22 @@
-route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color,route_text_color,exact_times
-2-SCO-sj2-1,X0000,SCO,South Coast Line,Intercity Trains Network,2,005AA3,FFFFFF,1
-2-T4-sj2-1,x0001,T4,T4 Eastern Suburbs and Illawarra Line,Sydney Trains Network,2,005AA3,FFFFFF,1
-2-T8-sj2-1,x0001,T8,T8 Airport and South Line,Sydney Trains Network,2,00954C,FFFFFF,1
-31-19T-8-sj2-1,7066,19T8,"Sydenham, Wolli Creek, Padstow, then all stations to Glenfield",Temporary buses,714,00B5EF,FFFFFF,1
-31-36T-4-sj2-1,7066,36T4,"Sydenham, then Wolli Creek, Arncliffe",Temporary buses,714,00B5EF,FFFFFF,1
-74-348-sj2-1,2459,348,Prince of Wales Hospital to Wolli Creek,Sydney Buses Network,700,00B5EF,FFFFFF,1
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+APS_1a,SydneyTrains,T8,City Circle to Macarthur via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_1b,SydneyTrains,T8,City Circle to Leppington via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_2a,SydneyTrains,T8,Macarthur to City Circle via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_2b,SydneyTrains,T8,Leppington to City Circle via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
+ESI_1a,SydneyTrains,T4,Bondi Junction to Waterfall via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_1c,SydneyTrains,T4,City Circle to Waterfall,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_1d,SydneyTrains,T4,Bondi Junction to Cronulla via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_1f,SydneyTrains,T4,City Circle to Cronulla,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_2a,SydneyTrains,T4,Waterfall to Bondi Junction via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_2b,SydneyTrains,T4,Waterfall to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_2d,SydneyTrains,T4,Cronulla to Bondi Junction via City,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_2e,SydneyTrains,T4,Cronulla to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+ESI_2f,SydneyTrains,T4,Cronulla to City Circle ,T4 Eastern Suburbs & Illawarra Line,2,,005AA3,FFFFFF
+IWL_2a,SydneyTrains,T2,Parramatta to City Circle ,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+IWL_2b,SydneyTrains,T2,Parramatta to City Circle ,T2 Leppington & Inner West Line,2,,0098CD,FFFFFF
+RTTA_DEF,SydneyTrains,,Out Of Service,Out Of Service trips,2,,888888,FFFFFF
+RTTA_REV,SydneyTrains,,Non Revenue,Non Revenue trips,2,,888888,FFFFFF
+SCO_1a,NSWTrains,SCO,Bondi Junction and Central to Bomaderry ,South Coast Line,2,,005AA3,FFFFFF
+SCO_1b,NSWTrains,SCO,Bondi Junction and Central to Port Kembla,South Coast Line,2,,005AA3,FFFFFF
+SCO_2a,NSWTrains,SCO,Bomaderry to Central and Bondi Junction,South Coast Line,2,,005AA3,FFFFFF
+SCO_2b,NSWTrains,SCO,Port Kembla to Central and Bondi Junction,South Coast Line,2,,005AA3,FFFFFF

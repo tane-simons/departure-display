@@ -1,14 +1,6 @@
-stop_id,stop_code,stop_name,stop_lat,stop_lon,location_type,parent_station,wheelchair_boarding,level_id,platform_code
-220510,,Wolli Creek Station,-33.92853822,151.15411287,1,,1,,
-220510_CNC,,Concourse,-33.92869552,151.15399081,3,220510,,Level -1,
-220510_DP1,,Acc To Concourse,-33.92873114,151.15400335,3,220510,,Level -1,
-220510_DP2,,STR/LFT To P2,-33.92860593,151.15397565,3,220510,,Level -1,
-220510_DP3,,STR/LFT To P1,-33.92845228,151.15398979,3,220510,,Level -1,
-220510_DP4,,STR/LFT To P3/4,-33.92821962,151.15367583,3,220510,,Level -1,
-220510_ENT1,,STR/LFT Discovery,-33.92887542,151.15399956,2,220510,1,Level 0,
-220510_KAR,,KAR Discovery P Pl,-33.92890010,151.15353598,,220510,,Level 0,
-2205111,2205111,"Wolli Creek Station, Platform 1",-33.92851440,151.15428465,,220510,1,Level -2,1
-2205112,2205112,"Wolli Creek Station, Platform 2",-33.92859572,151.15427780,,220510,1,Level -2,2
-2205113,2205113,"Wolli Creek Station, Platform 3",-33.92802634,151.15379614,,220510,1,Level 0,3
-2205114,2205114,"Wolli Creek Station, Platform 4",-33.92806950,151.15385228,,220510,1,Level 0,4
-2205115,2205115,"Wolli Creek Station, Discovery Point Pl",-33.92877441,151.15378928,,220510,1,Level 0,
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+220510,220510,Wolli Creek Station,,-33.9285468328,151.154113182,,,1,,,1
+2205111,2205111,Wolli Creek Station Platform 1,,-33.928538,151.1545,,,0,220510,,0
+2205112,2205112,Wolli Creek Station Platform 2,,-33.928626,151.154463,,,0,220510,,0
+2205113,2205113,Wolli Creek Station Platform 3,,-33.928023,151.153793,,,0,220510,,0
+2205114,2205114,Wolli Creek Station Platform 4,,-33.928067,151.153852,,,0,220510,,0
