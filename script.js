@@ -24,8 +24,7 @@ async function fetchRealtimeDelays() { //for the realtime gtfs delays
         const root = protobuf.parse(GTFS_RT_PROTO).root; //protobuf deocde binary
         const FeedMessage = root.lookupType("FeedMessage");
         const mainURL = 'https://api.transport.nsw.gov.au/v2/gtfs/realtime/sydneytrains';
-        const url = `https://proxy.corsfix.com/?${mainURL}`;
-        const res = await fetch(url, {
+        const res = await corsfix.fetch(mainURL, {
             headers: {'Authorization': `apikey ${API_KEY}`},
             cache: 'no-store'
         });
