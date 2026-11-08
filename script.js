@@ -23,9 +23,10 @@ async function fetchRealtimeDelays() { //for the realtime gtfs delays
     try {
         const root = protobuf.parse(GTFS_RT_PROTO).root; //protobuf deocde binary
         const FeedMessage = root.lookupType("FeedMessage");
-        const url = 'https://corsproxy.io/?'+encodeURIComponent('https://api.transport.nsw.gov.au/v2/gtfs/realtime/sydneytrains');
+        const mainURL = 'https://api.transport.nsw.gov.au/v2/gtfs/realtime/sydneytrains';
+        const url = `https://proxy.corsfix.com/?${mainURL}`;
         const res = await fetch(url, {
-            headers: { 'Authorization': `apikey ${API_KEY}`},
+            headers: {'Authorization': `apikey ${API_KEY}`},
             cache: 'no-store'
         });
         const buffer = await res.arrayBuffer(); //array for the bnary
@@ -35,13 +36,18 @@ async function fetchRealtimeDelays() { //for the realtime gtfs delays
             const tu = entity.tripUpdate;
             if (!tu || !tu.trip) return; //skip empty
             const tripId = tu.trip.tripId;
+            const shortTripId = tripId.split('.')[0];
             (tu.stopTimeUpdate || []).forEach(stu => { //loops thru each stop update for each trip to check delays
-                if (stu.departure && typeof stu.departure.delay === 'number') {
-                    delays[`${tripId}_${stu.stopId}`] = stu.departure.delay; //saves delay info against the stop and trip
-                    delays[tripId] = stu.departure.delay;
+                const event = stu.departure || stu.arrival;
+                if (event && typeof event.delay === 'number') {
+                    delays[`${tripId}_${stu.stopId}`] = event.delay; //saves delay info against the stop and trip
+                    delays[`${shortTripId}_${stu.stopId}`] = event.delay;
+                    if (delays[tripId]===undefined) delays[tripId] = event.delay;
+                    if (delays[shortTripId]===undefined) delays[shortTripId] = event.delay;
                 }
             });
         });
+        console.log('loadded realtime delay entries:',Object.keys(delays).length);
     } catch (e) {
         console.error('realtime fetch failed, fall abck to static', e);
     }
@@ -99,7 +105,8 @@ async function loadDepartures() {
                 const trip = trips.find(t => t.trip_id === st.trip_id) || {};
                 if (!currentServices.has(trip.service_id)) return null;
                 const route = routes.find(r => r.route_id === trip.route_id) || {};
-                const delaySec = rtDelays[`${st.trip_id}_${st.stop_id}`] ?? rtDelays[st.trip_id] ?? 0;
+                const shortId = st.trip_id.split('.')[0];
+                const delaySec = rtDelays[`${st.trip_id}_${st.stop_id}`] ?? rtDelays[`${shortId}_${st.stop_id}`] ?? rtDelays[st.trip_id] ?? rtDelays[shortId] ?? 0;
                 const delayMins = Math.round(delaySec/60);
                 const minsLeft = minsUntil(st.departure_time)+delayMins;
                 const platform = stops.find(s => s.stop_id === st.stop_id);
@@ -143,12 +150,12 @@ async function loadDepartures() {
             clone.querySelector('.platform-name').textContent = d.platform_name;
             clone.querySelector('.time-left').textContent = d.mins_left=== 0 ? 'Now' : `${d.mins_left}m`; //if 0mins remain then the arrivl is now
             const ontimeEl = clone.querySelector('.ontime');
-            if (d.delay_mins <= 0) { //if no delay the on time and green, and vice versa
+            if (d.delay_mins <= 0) { //if no delay the on time and green, under 5mins delay is orange, and red for over
                 ontimeEl.textContent = `On time`;
                 ontimeEl.style.color='limegreen';
             } else {
                 ontimeEl.textContent =  `${d.delay_mins}m late`;
-                ontimeEl.style.color = `red`;
+                ontimeEl.style.color = d.delay_mins < 5 ? `orange`: 'red';
             }
             container.appendChild(clone); //adds the templated clone
         })
@@ -160,3 +167,12 @@ async function loadDepartures() {
 
 loadDepartures();
 setInterval(loadDepartures,60000) //refreshes each minute
+
+function currentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2,'0');
+    const minutes = String(now.getMinutes()).padStart(2,'0');
+    document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+}
+currentTime()
+setInterval(currentTime, 1000); //refreshes every second
