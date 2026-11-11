@@ -1,6 +1,7 @@
 route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
 APS_1a,SydneyTrains,T8,City Circle to Macarthur via Airport,T8 Airport & South Line,2,,00954C,FFFFFF
 APS_1c,SydneyTrains,T8,City Circle to Macarthur via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
+APS_1d,SydneyTrains,T8,City Circle to Macarthur via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
 APS_1e,SydneyTrains,T8,City Circle to Leppington via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
 APS_1f,SydneyTrains,T8,City Circle to Leppington via Sydenham,T8 Airport & South Line,2,,00954C,FFFFFF
 CCN_1b,NSWTrains,CCN,Central to Newcastle Interchange via Gordon,Central Coast & Newcastle Line,2,,D11F2F,FFFFFF
