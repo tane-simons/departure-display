@@ -26,7 +26,6 @@ NSN_2k,SydneyTrains,T1,Berowra to Emu Plains via City,T1 North Shore Line,2,,F99
 NTH_1a,SydneyTrains,T9,North Shore to Hornsby and Berowra via City and Strathfield,T9 Northern Line,2,,D11F2F,FFFFFF
 NTH_1b,SydneyTrains,T9,North Shore to Hornsby and Berowra via City and Strathfield,T9 Northern Line,2,,D11F2F,FFFFFF
 NTH_2a,SydneyTrains,T9,Berowra and Hornsby to North Shore via Strathfield and City,T9 Northern Line,2,,D11F2F,FFFFFF
-OLY_1a,SydneyTrains,T7,Central to Olympic Park,T7 Olympic Park Line,2,,6F818E,FFFFFF
 RTTA_DEF,SydneyTrains,,Out Of Service,Out Of Service trips,2,,888888,FFFFFF
 RTTA_REV,SydneyTrains,,Non Revenue,Non Revenue trips,2,,888888,FFFFFF
 SCO_1a,NSWTrains,SCO,Bondi Junction and Central to Bomaderry ,South Coast Line,2,,005AA3,FFFFFF
