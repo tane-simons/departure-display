@@ -1,2 +1,2 @@
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
-2017.102.128,0,0,0,0,0,1,0,20261114,20261114
+2018.102.2,0,0,0,0,0,0,1,20261115,20261115
